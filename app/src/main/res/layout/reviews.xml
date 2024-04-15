@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+        <ImageView
+            android:id="@+id/review_icon_user_for"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_for_review"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginLeft="@dimen/_20sdp"/>
+        <TextView
+            android:id="@+id/reviewer_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gonela Solom"
+            android:textColor="@color/black"
+            android:layout_toEndOf="@+id/review_icon_user_for"
+            android:fontFamily="@font/poppins_light"
+            android:textStyle="bold"
+            android:textSize="@dimen/_15ssp"
+            android:layout_marginTop="@dimen/_20sdp"/>
+
+        <TextView
+            android:id="@+id/date_text_reviews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="22/06/2020"
+            android:layout_toEndOf="@+id/review_icon_user_for"
+            android:layout_below="@+id/reviewer_name"
+            android:textColor="@color/textgrey"
+            android:fontFamily="@font/poppins_light"
+            android:textStyle="bold"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/more_btn"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            />
+        <TextView
+            android:id="@+id/review_text_from_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/review_icon_user_for"
+            android:textColor="@color/textgrey"
+            android:text=""
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:textSize="@dimen/_10ssp"
+            android:fontFamily="@font/poppins_light"
+            android:textStyle="bold"/>
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/mainact_img">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/mainact_background"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/skip_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Skip"
+            android:textColor="@color/orange"
+            android:backgroundTint="@color/newwhite"
+            android:layout_marginLeft="@dimen/_120sdp"
+            android:layout_marginTop="@dimen/_10sdp"/>
+
+        <ImageView
+            android:id="@+id/welcome_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/welcome_text"
+            android:layout_marginTop="50dp"
+            android:layout_below="@id/skip_btn"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageView
+            android:id="@+id/sign_inwith"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/sign_inwith"
+            android:layout_marginTop="200dp"
+            android:layout_below="@id/welcome_text"
+            android:layout_centerHorizontal="true"/>
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sign_inwith"
+            android:layout_centerHorizontal="true">
+
+            <ImageButton
+                android:id="@+id/facebook_btn"
+                android:layout_width="@dimen/_140sdp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/facebook_img"
+                android:layout_marginStart="30dp"/>
+            <ImageButton
+                android:id="@+id/google_btn"
+                android:layout_width="@dimen/_130sdp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/google_img"/>
+
+        </GridLayout>
+
+        <ImageButton
+            android:id="@+id/startwithbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/start_with_btn"
+            android:layout_below="@id/facebook_btn"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageButton
+            android:id="@+id/signinbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/already_have_btn"
+            android:layout_below="@id/startwithbtn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

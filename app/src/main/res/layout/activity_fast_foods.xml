@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_marginTop="@dimen/_30sdp"
+    android:layout_height="match_parent"
+    android:background="@drawable/fast_food_background"
+    android:orientation="vertical"
+    tools:context=".Pages.FastFoods_Activity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/back_btn_fastfood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/back_btn"
+            android:layout_marginTop="@dimen/_20sdp"/>
+
+        <ImageView
+            android:id="@+id/fastfood_txtimg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/fast_food_text"
+            android:layout_below="@+id/back_btn_fastfood"
+            android:layout_marginLeft="@dimen/_30sdp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="80 type of pizza"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="@color/grey"
+            android:layout_below="@+id/fastfood_txtimg"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_30sdp"/>
+
+        <GridLayout
+            android:id="@+id/grid_fastfood_sort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:layout_marginLeft="@dimen/_30sdp"
+            android:layout_below="@+id/fastfood_txtimg">
+            <TextView
+                android:id="@+id/sortby_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sort by:"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_bold"
+                android:textSize="@dimen/_10ssp"
+                />
+            <TextView
+                android:id="@+id/popular_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  Popular "
+                android:textSize="@dimen/_10ssp"
+                android:textColor="@color/buttonorange"
+                android:fontFamily="@font/poppins_bold"/>
+            <ImageButton
+                android:layout_width="@dimen/_8sdp"
+                android:layout_height="@dimen/_5sdp"
+                android:background="@drawable/arrow"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginLeft="@dimen/_2sdp"
+                />
+        </GridLayout>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icon_besidesearch"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/fastfood_txtimg"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/reyclerview_fastfood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/grid_fastfood_sort"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

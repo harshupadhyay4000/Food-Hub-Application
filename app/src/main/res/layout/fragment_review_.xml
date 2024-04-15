@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Pages.Review_Fragment"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ImageButton
+        android:id="@+id/back_btn_review"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back_btn"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        />
+
+        <TextView
+            android:id="@+id/review_text_review"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reviews"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_bold"
+            android:textSize="@dimen/_17ssp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/review_bar_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/review_text_review"
+            android:layout_marginStart="@dimen/_30ssp"
+            android:layout_marginEnd="@dimen/_81ssp"
+            app:hintEnabled="false"
+            android:focusable="true"
+            app:cursorColor="@color/black"
+            android:clickable="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_10ssp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edittext_review_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/_5ssp"
+            android:background="@drawable/search_bar"
+            android:hint=" Write Your Review..."
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp"
+            android:focusable="true"
+            android:textCursorDrawable="@null"
+            android:cursorVisible="true"
+            android:gravity="center_vertical"
+            android:inputType="text"
+            android:textColorHint="#9AA0B4"
+            android:fontFamily="@font/poppins_light"
+            android:drawableStart="@drawable/circle_icon_user"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycle_review_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/review_bar_text"
+            android:layout_marginTop="@dimen/_20sdp"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

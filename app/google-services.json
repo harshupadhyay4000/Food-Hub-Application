@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "932093723637",
+    "project_id": "signin-java-baac3",
+    "storage_bucket": "signin-java-baac3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:932093723637:android:09830f51658347c0e116bc",
+        "android_client_info": {
+          "package_name": "com.example.ui"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLkkICu7HnicUZmfJqdBO7GzrHEs7i7VM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

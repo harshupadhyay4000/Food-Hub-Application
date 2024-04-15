@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+
+    <color name="white">#FFFFFFFF</color>
+    <color name="reviewwhite">#2CFFFFFF</color>
+
+    <color name="transparentwhite">#68FFFFFF</color>
+
+    <color name="newwhite">#FDF7F7</color>
+    <color name="grey">#979292</color>
+    <color name="textgrey">#8C9099</color>
+    <color name="newgrey">#9796A1</color>
+
+
+
+    <color name="red">#E40505</color>
+    <color name="orange">#FF9800</color>
+    <color name="buttonorange">#FE724C</color>
+
+    <color name="yellow">#F8E32D</color>
+    <color name="blue">#2D37F8</color>
+    <color name="lightblue">#03A9F4</color>
+
+    <color name="mtrl_textinput_default_box_stroke_color">#FE724C</color>
+    <color name="bottom_navigation_icon_color">#FE724C</color>
+</resources>

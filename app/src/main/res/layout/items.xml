@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cardview_items"
+    android:layout_width="@dimen/_90sdp"
+    android:layout_height="@dimen/_140sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/_20sdp"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:layout_marginLeft="@dimen/_20sdp"
+    android:backgroundTint="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/item_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_90sdp"
+            />
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_20sdp"
+            app:cardCornerRadius="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:backgroundTint="@color/white">
+            <TextView
+                android:id="@+id/itemprice_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹1000"
+                android:textSize="@dimen/_8ssp"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginLeft="@dimen/_7sdp"/>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_18sdp"
+            app:cardCornerRadius="@dimen/_20sdp"
+            android:layout_marginTop="-20dp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:backgroundTint="@color/white"
+            android:layout_below="@+id/item_image">
+
+
+                <TextView
+                    android:id="@+id/ratings_text_items"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4.5"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_5ssp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:fontFamily="@font/poppins_bold"
+
+                    />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/star"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginLeft="-5dp"
+                    />
+                <TextView
+                    android:id="@+id/outlets_text_items"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(25+)"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_5ssp"
+                    android:fontFamily="@font/poppins_light"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginLeft="@dimen/_22sdp"
+                    />
+
+
+
+
+        </androidx.cardview.widget.CardView>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/like_btn"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_5sdp"/>
+
+        <TextView
+            android:id="@+id/item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Item Name"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_light"
+            android:textStyle="bold"
+            android:textSize="@dimen/_10ssp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_below="@+id/item_image"
+            android:layout_marginLeft="@dimen/_10sdp"
+            />
+
+        <TextView
+            android:id="@+id/item_description_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Baked Dish"
+            android:textColor="@color/grey"
+            android:layout_below="@+id/item_name"
+            android:textSize="@dimen/_8ssp"
+            android:layout_marginLeft="@dimen/_10sdp"/>
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">UI</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="choose_state_prompt">Select State</string>
+    <string name="choose_city_prompt">Select City</string>
+    <string name="default_web_client_id">YOUR_DEFAULT_WEB_CLIENT_ID</string>
+
+    <string name="facebook_app_id">1576969403152077</string>
+    <string name="fb_login_protocol_scheme">fb1234</string>
+    <string name="facebook_client_token">56789</string>
+
+
+
+</resources>
