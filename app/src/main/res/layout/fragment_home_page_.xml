@@ -50,11 +50,12 @@
             android:textStyle="bold"
             android:textSize="@dimen/_15ssp"
             />
-        <ImageButton
+        <ImageView
             android:id="@+id/home_frag_usericon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
             android:background="@drawable/user_icon"
+            android:layout_marginRight="@dimen/_10sdp"
             android:layout_alignParentEnd="true"/>
         <androidx.core.widget.NestedScrollView
             android:layout_width="wrap_content"
@@ -133,7 +134,7 @@
                     android:textStyle="bold"
                     android:fontFamily="@font/poppins_bold"
                     android:layout_below="@+id/recycle_food_home"
-                    android:layout_marginStart="@dimen/_30ssp"
+                    android:layout_marginStart="@dimen/_20ssp"
                     android:layout_marginTop="@dimen/_10ssp"
                     />
                 <androidx.recyclerview.widget.RecyclerView
@@ -142,7 +143,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_10sdp"
                     android:layout_below="@+id/featured_resturant_text"
-                    android:layout_marginStart="@dimen/_15ssp"
+                    android:layout_marginStart="@dimen/_10ssp"
                     android:orientation="horizontal"
                     android:padding="@dimen/_3ssp"/>
                 <TextView
@@ -151,7 +152,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/home_recycleRestaurants"
                     android:text="Popular Items"
-                    android:layout_marginStart="@dimen/_30ssp"
+                    android:layout_marginStart="@dimen/_20ssp"
                     android:layout_marginTop="@dimen/_20sdp"
                     android:textColor="#323643"
                     android:fontFamily="@font/poppins_bold"
@@ -163,7 +164,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/home_populer"
                     android:layout_marginTop="@dimen/_10sdp"
-                    android:layout_marginStart="@dimen/_15ssp"
+                    android:layout_marginStart="@dimen/_10ssp"
                     android:layout_marginBottom="@dimen/_20sdp"
                     android:orientation="vertical"
                     android:padding="@dimen/_3ssp"/>

@@ -6,11 +6,13 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
 import com.example.ui.R;
 import com.example.ui.ViewPagerFavAdpater;
@@ -23,13 +25,26 @@ public class Favourites_Fragment extends Fragment {
     private ViewPager2 viewPager;
     private TabLayout tabLayout;
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_favourites_, container, false);
+        ImageButton backButton = view.findViewById(R.id.Favorites_back);
+
+        // Set onClick listener for the back button
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Navigate to the HomePageFragment (index 0 in ViewPager)
+                ((ViewPager) requireActivity().findViewById(R.id.viewpager_home)).setCurrentItem(0);
+            }
+        });
         viewPager = view.findViewById(R.id.viewPagerFav);
         tabLayout = view.findViewById(R.id.tabLayoutFav);
+
+
         return view;
 
     }

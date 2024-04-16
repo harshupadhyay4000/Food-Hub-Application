@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
     tools:context=".Pages.Bag_Fragment">
-    <ImageView
+    <ImageButton
         android:id="@+id/bag_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

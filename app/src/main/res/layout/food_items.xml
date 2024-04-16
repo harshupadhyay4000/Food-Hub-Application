@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/maincard_fooditems"
-    android:layout_width="@dimen/_250sdp"
+    android:layout_width="@dimen/_290sdp"
     android:layout_height="@dimen/_200sdp"
-    android:layout_marginLeft="@dimen/_40sdp"
+    android:layout_marginLeft="@dimen/_15sdp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="@dimen/_30sdp"
     android:layout_marginTop="@dimen/_20sdp"
@@ -11,8 +11,9 @@
     >
     <ImageView
         android:id="@+id/product_image_fooditems"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:scaleType="fitXY"
         android:src="@drawable/pizza_one_img"
         />
     <RelativeLayout

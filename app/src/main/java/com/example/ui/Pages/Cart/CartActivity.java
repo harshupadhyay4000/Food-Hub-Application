@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,6 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.ui.Pages.FoodDetails;
 import com.example.ui.R;
 
 import java.util.ArrayList;
@@ -23,6 +25,7 @@ public class CartActivity extends AppCompatActivity {
     LinearLayoutManager layoutManager;
     CartAdapter cartAdapter;
     Button checkout;
+    ImageButton back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +37,7 @@ public class CartActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
+        back=findViewById(R.id.backbtn_cart);
         recyclerView=findViewById(R.id.recycle_cart);
         layoutManager=new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
@@ -51,6 +54,15 @@ public class CartActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent=new Intent(CartActivity.this, RateServiceActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(CartActivity.this, FoodDetails.class);
+                startActivity(intent);
+                finish();
             }
         });
     }

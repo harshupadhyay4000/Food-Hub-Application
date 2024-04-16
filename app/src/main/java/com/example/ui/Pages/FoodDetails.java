@@ -1,6 +1,10 @@
 package com.example.ui.Pages;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,7 +25,9 @@ public class FoodDetails extends AppCompatActivity {
     RecyclerView recyclerView;
     LinearLayoutManager layoutManager;
     ProductDetailsAdapter productDetailsAdapter;
+    ImageButton back;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +47,17 @@ public class FoodDetails extends AppCompatActivity {
         details.add(new Details("Ground Tacos","4.5","(30+)","₹350","Brown Bread Better with extra cheese. Used 85% Veggies. Garlic - use fresh chopped. Spices - chili powder, cumin, onion powder."));
         productDetailsAdapter=new ProductDetailsAdapter(this,details);
         recyclerView.setAdapter(productDetailsAdapter);
+
+        back=findViewById(R.id.back_btn_fooddetails);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(FoodDetails.this, FastFoods_Activity.class);
+                startActivity(intent);
+                finish();
+
+            }
+        });
 
 
     }

@@ -1,6 +1,9 @@
 package com.example.ui.Pages;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,6 +24,7 @@ public class FastFoods_Activity extends AppCompatActivity {
     RecyclerView recyclerView;
     LinearLayoutManager layoutManager;
     FastFoodAdapter fastFoodAdapter;
+    ImageButton back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +41,15 @@ public class FastFoods_Activity extends AppCompatActivity {
         layoutManager=new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-
+        back=findViewById(R.id.back_btn_fastfood);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(FastFoods_Activity.this, HomeActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
         List<Pizza> pizzas=new ArrayList<>();
 
         pizzas.add(new Pizza("Jalapeno Hawaiian",R.drawable.pizza_one_img,"4.5","(27+)","₹350","Jalapeno, Cheese and Pineapple"));

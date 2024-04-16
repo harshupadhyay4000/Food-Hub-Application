@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,6 +18,7 @@ import com.example.ui.R;
 public class ForgotPassword extends AppCompatActivity {
 
     Button sendnewpassword;
+    ImageButton back;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -27,6 +29,15 @@ public class ForgotPassword extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+        back=findViewById(R.id.backbutton_resetpassword);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(ForgotPassword.this, Login.class);
+                startActivity(intent);
+                finish();
+            }
         });
 
         sendnewpassword=findViewById(R.id.send_newpassword_btn);

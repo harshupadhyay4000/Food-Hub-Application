@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/navigation_bar"
+        android:id="@+id/navigation_bar_new"
         android:icon="@drawable/my_orders"
         android:title="My Order" />
     <item
-        android:id="@+id/navigation_profile"
+        android:id="@+id/navigation_profile_new"
         android:icon="@drawable/my_profile"
         android:title="My Profile" />
     <item
-        android:id="@+id/navigation_delivery"
+        android:id="@+id/navigation_delivery_new"
         android:icon="@drawable/location_sidebar"
         android:title="Delivery Address" />
     <item
-        android:id="@+id/navigation_wallet"
+        android:id="@+id/navigation_wallet_new"
         android:icon="@drawable/wallet_icon"
         android:title="Payment Methods" />
     <item
-        android:id="@+id/navigation_contact"
+        android:id="@+id/navigation_contact_new"
         android:icon="@drawable/message_icon"
         android:title="Contact Us" />
     <item
-        android:id="@+id/navigation_settings"
+        android:id="@+id/navigation_settings_new"
         android:icon="@drawable/setting_icon"
         android:title="Settings" />
     <item
-        android:id="@+id/navigation_help"
+        android:id="@+id/navigation_help_new"
         android:icon="@drawable/help_btn"
         android:title="Help and FAQs" />
 

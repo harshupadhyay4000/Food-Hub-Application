@@ -9,7 +9,22 @@
     <string name="facebook_app_id">1576969403152077</string>
     <string name="fb_login_protocol_scheme">fb1234</string>
     <string name="facebook_client_token">56789</string>
+    <string-array name="states_of_india">
+        <item>Gujarat</item>
+        <item>Maharashtra</item>
 
+
+    </string-array>
+    <string-array name="cities_state1">
+        <item>Jamnagar</item>
+        <item>Ahmedabad</item>
+
+    </string-array>
+    <string-array name="cities_state2">
+        <item>Mumbai</item>
+        <item>Pune</item>
+
+    </string-array>
 
 
 </resources>

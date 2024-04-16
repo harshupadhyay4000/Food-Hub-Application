@@ -15,10 +15,11 @@
 
         <ImageView
             android:id="@+id/new_pizza_image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/_270sdp"
+            android:layout_height="@dimen/_100sdp"
             android:src="@drawable/new_pizza"
             android:layout_marginTop="@dimen/_30sdp"
+            android:scaleType="fitXY"
             android:layout_centerHorizontal="true"
             />
         <ImageButton
@@ -28,7 +29,7 @@
             android:background="@drawable/back_btn"
             android:layout_alignParentStart="true"
             android:layout_marginTop="@dimen/_30sdp"
-            android:layout_marginLeft="@dimen/_30sdp"/>
+            android:layout_marginLeft="@dimen/_20sdp"/>
         <androidx.cardview.widget.CardView
             android:id="@+id/main_card_white"
             android:layout_width="@dimen/_65sdp"

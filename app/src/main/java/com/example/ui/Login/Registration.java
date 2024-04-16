@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,6 +18,7 @@ import com.example.ui.R;
 
 public class Registration extends AppCompatActivity {
     Button send;
+    ImageButton back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,5 +38,15 @@ public class Registration extends AppCompatActivity {
                 finish();
             }
         });
+        back=findViewById(R.id.backbutton_registration);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Registration.this, Login.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
     }
 }

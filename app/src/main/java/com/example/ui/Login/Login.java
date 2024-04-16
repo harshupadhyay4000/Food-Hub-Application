@@ -1,7 +1,11 @@
 package com.example.ui.Login;
 
+
+
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
@@ -21,6 +25,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.ui.Pages.Adapters.VariableBag;
 import com.example.ui.Pages.HomeActivity;
 import com.example.ui.R;
 import com.example.ui.databinding.ActivityMainBinding;
@@ -63,7 +68,7 @@ public class Login extends AppCompatActivity {
 
     Button login;
     TextView signup, forgotpassword;
-    ImageButton googleSignInButton, facebookSignInButton;
+    ImageButton googleSignInButton, facebookSignInButton, Backbtn;
     CallbackManager mCallbackManager;
     private static final int RC_SIGN_IN = 100;
     private GoogleSignInClient googleSignInClient;
@@ -83,7 +88,17 @@ public class Login extends AppCompatActivity {
         signup = findViewById(R.id.signup_login);
         forgotpassword = findViewById(R.id.forgot_password_login);
         googleSignInButton = findViewById(R.id.googlesigninbtn);
+        Backbtn=findViewById(R.id.back_btn_login);
         facebookSignInButton=findViewById(R.id.facebook_btn_login);
+
+        Backbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Login.this, Signup.class);
+                startActivity(intent);
+                finish();
+            }
+        });
         database= FirebaseDatabase.getInstance("https://signin-java-baac3-default-rtdb.firebaseio.com/");
         try {
             PackageInfo info = getPackageManager().getPackageInfo(
@@ -220,10 +235,17 @@ public class Login extends AppCompatActivity {
                             assert user != null;
                             users user1=new users();
                             user1.setUserName(user.getDisplayName());
+                            String profileImageUrl = user.getPhotoUrl() != null ? user.getPhotoUrl().toString() : null;
+                            VariableBag.path = profileImageUrl;
+                            // In the handleFacebookAccessToken method
+                            VariableBag.emaill = user.getEmail();
+                            VariableBag.namee = user.getDisplayName();
                             database.getReference().child("users").child(user.getUid()).setValue(user1);
                             Intent intent=new Intent(Login.this, HomeActivity.class);
+
                             intent.putExtra("name",user.getDisplayName());
                             startActivity(intent);
+
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithCredential:failure", task.getException());
@@ -239,24 +261,31 @@ public class Login extends AppCompatActivity {
         AuthCredential credential = GoogleAuthProvider.getCredential(account.getIdToken(), null);
         firebaseAuth.signInWithCredential(credential)
                 .addOnSuccessListener(authResult -> {
-                    Log.d(TAG,"onSuccess: Logged In");
-                    FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
+                    Log.d(TAG, "onSuccess: Logged In");
+                    FirebaseUser firebaseUser = firebaseAuth.getCurrentUser(); // Corrected to firebaseAuth.getCurrentUser()
                     String uid = firebaseUser.getUid();
                     String email = firebaseUser.getEmail();
-                    Log.d(TAG,"onSuccess: Email: "+email);
-                    Log.d(TAG,"onSuccess: UID: "+uid);
-                    if (authResult.getAdditionalUserInfo().isNewUser()){
-                        Toast.makeText(Login.this, "Account Created...\n"+email, Toast.LENGTH_SHORT).show();
+                    Log.d(TAG, "onSuccess: Email: " + email);
+                    String profileImageUrl = firebaseUser.getPhotoUrl() != null ? firebaseUser.getPhotoUrl().toString() : null; // Corrected to firebaseUser
+                    Log.d(TAG, "onSuccess: UID: " + uid);
+                    if (authResult.getAdditionalUserInfo().isNewUser()) {
+                        Toast.makeText(Login.this, "Account Created...\n" + email, Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(Login.this, "Existing User...\n" + email, Toast.LENGTH_SHORT).show();
                     }
-                    else {
-                        Toast.makeText(Login.this, "Existing User...\n"+email, Toast.LENGTH_SHORT).show();
-                    }
-                    Intent intent=new Intent(Login.this, HomeActivity.class);
-                    intent.putExtra("name", user.getDisplayName());
-                    intent.putExtra("email", user.getEmail());
+                    VariableBag.path = profileImageUrl;
+                    // In the handleFacebookAccessToken method
+                    VariableBag.emaill = firebaseUser.getEmail();
+                    VariableBag.namee = firebaseUser.getDisplayName();
+                    Intent intent = new Intent(Login.this, HomeActivity.class);
+
+                    intent.putExtra("name", firebaseUser.getDisplayName()); // Corrected to firebaseUser
+                    intent.putExtra("email", firebaseUser.getEmail()); // Corrected to firebaseUser
                     startActivity(intent);
                     finish();
+
                 })
-                .addOnFailureListener(e -> Log.d(TAG,"onFailure: Login Failed"+e.getMessage()));
+                .addOnFailureListener(e -> Log.d(TAG, "onFailure: Login Failed" + e.getMessage()));
     }
+
 }

@@ -5,10 +5,12 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
 import com.example.ui.Pages.Adapters.Lists.Reviewlist;
 import com.example.ui.Pages.Adapters.ReviewAdapter;
@@ -26,6 +28,17 @@ public class Review_Fragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_review_, container, false);
+        ImageButton backButton = view.findViewById(R.id.back_btn_review);
+
+        // Set onClick listener for the back button
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Navigate to the HomePageFragment (index 0 in ViewPager)
+                ((ViewPager) requireActivity().findViewById(R.id.viewpager_home)).setCurrentItem(0);
+            }
+        });
+
         RecyclerView recyclerView=view.findViewById(R.id.recycle_review_bar);
         LinearLayoutManager layoutManager=new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(layoutManager);

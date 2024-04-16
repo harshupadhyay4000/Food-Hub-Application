@@ -1,6 +1,7 @@
 package com.example.ui;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 
@@ -10,12 +11,15 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.ui.Pages.Adapters.VariableBag;
 import com.example.ui.Pages.HomeActivity;
 import com.facebook.FacebookSdk;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class SplashScreen extends AppCompatActivity {
+    private static final String PREFS_NAME = "MyPrefsFile";
+    private static final String KEY_IS_LOGGED_IN = "isLoggedIn";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +36,13 @@ public class SplashScreen extends AppCompatActivity {
             // Check if the user is already authenticated
             FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
             if (currentUser != null) {
-                // User is already authenticated, navigate to HomeActivity
+                String name= currentUser.getDisplayName();
+                String emmail= currentUser.getEmail();
+                Uri photoUri= currentUser.getPhotoUrl();
+                String profileImageUrl = currentUser.getPhotoUrl() != null ? currentUser.getPhotoUrl().toString() : null;
+                VariableBag.path = profileImageUrl;
+                VariableBag.namee=name;
+                VariableBag.emaill=emmail;
                 Intent intent = new Intent(SplashScreen.this, HomeActivity.class);
                 startActivity(intent);
             } else {

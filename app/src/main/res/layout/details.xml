@@ -11,7 +11,7 @@
         android:textSize="@dimen/_20ssp"
         android:textColor="@color/black"
         android:fontFamily="@font/poppins_bold"
-        android:layout_marginLeft="@dimen/_30sdp"/>
+        android:layout_marginLeft="@dimen/_15sdp"/>
     <ImageView
         android:id="@+id/star_icon"
         android:layout_width="wrap_content"
@@ -19,7 +19,7 @@
         android:src="@drawable/star"
         android:layout_below="@+id/details_name"
         android:layout_marginTop="@dimen/_1sdp"
-        android:layout_marginLeft="@dimen/_35sdp"/>
+        android:layout_marginLeft="@dimen/_20sdp"/>
     <TextView
         android:id="@+id/rating_text_description"
         android:layout_width="wrap_content"
@@ -64,7 +64,7 @@
         android:textColor="@color/buttonorange"
         android:fontFamily="@font/poppins_bold"
         android:layout_marginTop="@dimen/_10sdp"
-        android:layout_marginLeft="@dimen/_35sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
         />
     <GridLayout
         android:layout_width="wrap_content"
@@ -102,7 +102,7 @@
         android:textSize="@dimen/_12ssp"
         android:layout_below="@+id/price_details"
         android:layout_marginTop="@dimen/_20sdp"
-        android:layout_marginLeft="@dimen/_30sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
         android:layout_marginRight="@dimen/_20sdp"
         android:textColor="@color/textgrey"/>
     <TextView
@@ -115,7 +115,7 @@
         android:fontFamily="@font/poppins_bold"
         android:textSize="@dimen/_12ssp"
         android:layout_marginTop="@dimen/_20sdp"
-        android:layout_marginLeft="@dimen/_35sdp"/>
+        android:layout_marginLeft="@dimen/_25sdp"/>
     <GridLayout
         android:id="@+id/grid_one_details"
         android:layout_width="wrap_content"
@@ -127,7 +127,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
             android:src="@drawable/pepper_img"/>
         <TextView
             android:layout_width="wrap_content"
@@ -165,7 +165,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/grid_one_details"
-        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginLeft="@dimen/_15sdp"
         >
 
         <ImageView
@@ -208,7 +208,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/grid_two_details"
-        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginLeft="@dimen/_15sdp"
         >
 
         <ImageView

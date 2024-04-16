@@ -18,6 +18,7 @@ import com.example.ui.R;
 public class Verification extends AppCompatActivity {
 
     TextView resendcode;
+    ImageButton Backbtn;
 
 
     @SuppressLint("MissingInflatedId")
@@ -29,6 +30,15 @@ public class Verification extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+        Backbtn=findViewById(R.id.backbutton_verification);
+        Backbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Verification.this, Login.class);
+                startActivity(intent);
+                finish();
+            }
         });
 
         resendcode=findViewById(R.id.resend_text);
