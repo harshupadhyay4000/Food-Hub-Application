@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context=".Pages.Resturant_Fragment">
+    android:background="@color/white">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp">
+
         <ImageView
             android:id="@+id/pizza_hut_icon"
             android:layout_width="wrap_content"
@@ -42,17 +43,13 @@
             android:fontFamily="@font/poppins_light"
             android:textStyle="bold"/>
 
-
-
         <RatingBar
             android:id="@+id/rating_bar_rate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/good_text_rate"
             android:layout_centerHorizontal="true"
-            android:progressTint="@color/yellow"
-             />
-
+            android:progressTint="@color/yellow"/>
 
         <EditText
             android:id="@+id/review_edit_text"
@@ -74,8 +71,5 @@
             android:textColor="@color/white"
             android:textSize="@dimen/_12ssp"
             android:layout_height="@dimen/_50sdp"/>
-
-
     </RelativeLayout>
-
-</RelativeLayout>
+</ScrollView>
