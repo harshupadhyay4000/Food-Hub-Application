@@ -4,47 +4,30 @@ Welcome to the README file for Food Hub Application!
 
 ## App Screenshots
 
-![Splashscreen](app_images/1.SplashScreen.png)
-## Splashscreen 
+<div align="center">
+    <img src="app_images/1.SplashScreen.png" alt="Splashscreen" width="200"/>
+    <img src="app_images/2.WelcomePage.png" alt="Welcome Page" width="200"/>
+    <img src="app_images/6.HomePage.png" alt="Home Page" width="200"/>
+</div>
+<div align="center">
+    <img src="app_images/3.LoginPage.png" alt="Login Page" width="200"/>
+    <img src="app_images/4.Verification.png" alt="Verification" width="200"/>
+    <img src="app_images/5.Registration.png" alt="Registration" width="200"/>
+</div>
+<div align="center">
+    <img src="app_images/7.AddressPage.png" alt="Address Page" width="200"/>
+    <img src="app_images/8.Orders.png" alt="Orders Page" width="200"/>
+    <img src="app_images/9.OrderReview.png" alt="OrderReview Page" width="200"/>
+</div>
+<div align="center">
+    <img src="app_images/10.Products.png" alt="Products Page" width="200"/>
+    <img src="app_images/11.ProductDetails.png" alt="Product Details Page" width="200"/>
+    <img src="app_images/12.Cart.png" alt="Cart Page" width="200"/>
+</div>
+<div align="center">
+    <img src="app_images/13.ServiceRating.png" alt="Rating Page" width="200"/>
+    <img src="app_images/14.PublicReviews.png" alt="Public Reviews Page" width="200"/>
+</div>
 
-![WelcomePage](app_images/2.WelcomePage.png)
-## Welcome Page
-
-![LoginPage](app_images/3.LoginPage.png)
-## Login Page
-
-![VerificationPage](app_images/4.Verification.png)
-## Verification
-
-![RegistrationPage](app_images/5.Registration.png)
-## Registration
-
-![HomePage](app_images/6.HomePage.png)
-## Home Page
-
-![AddressPage](app_images/7.AddressPage.png)
-## Address Page
-
-![OrdersPage](app_images/8.Orders.png)
-## Orders Page
-
-![OrderReview](app_images/9.OrderReview.png)
-## OrderReview Page
-
-![Products](app_images/10.Products.png)
-## Products Page
-
-![ProductDetails](app_images/11.ProductDetails.png)
-## Product Details Page
-
-![Cart](app_images/11.Cart.png)
-## Cart Page
-
-![ServiceRating](app_images/13.ServiceRating.png)
-## Rating Page
-
-![PublicReviews](app_images/14.PublicReviews.png)
-## Public Reviews Page
-
-![DesignPreview](app_images/Design.png)
 ## Design Preview
+![DesignPreview](app_images/Design.png)
