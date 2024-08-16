@@ -4,11 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_marginTop="@dimen/_30sdp"
     android:layout_height="match_parent"
     android:background="@drawable/fast_food_background"
     android:orientation="vertical"
     tools:context=".Pages.FastFoods_Activity">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -86,5 +90,5 @@
             android:layout_marginBottom="@dimen/_10sdp"
             />
     </RelativeLayout>
-
+    </androidx.core.widget.NestedScrollView>
 </LinearLayout>

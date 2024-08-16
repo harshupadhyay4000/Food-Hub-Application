@@ -23,6 +23,7 @@
         app:labelVisibilityMode="unlabeled"
         app:itemIconTint="@drawable/iconcolor"
         app:itemIconSize="@dimen/_25sdp"
+        app:itemActiveIndicatorStyle="@color/white"
         android:background="@color/white"
         />
 </RelativeLayout>
