@@ -3,8 +3,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Pages.Location_Fragment">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
     <GridLayout
         android:id="@+id/grid_location"
         android:layout_width="wrap_content"
@@ -221,5 +232,6 @@
         android:backgroundTint="@color/buttonorange"
         android:layout_centerInParent="true"
         />
-
+    </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
 </RelativeLayout>
